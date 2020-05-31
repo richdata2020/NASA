@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Row, Col } from "reactstrap";
 
 const NasaContainer = styled.div`
-    margin: 5% 10%;
+    margin: 5% 10% 10% 10%; 
 `
 const ButtonsDiv = styled.div`
     display: flex;
@@ -19,12 +19,15 @@ const Img = styled.img`
 
 const NasaData = styled.div`
     background-color: rgba(63, 63, 63, 0.9);
+`
+
+const NasaDes = styled.div`
     padding-right: 25px;
     text-align: justify;
     @media (max-width: 1000px) {
         padding-right: 0px;
+        padding: 0 5%;
     }
-
 `
 
 const NasaCard = props => {
@@ -48,9 +51,11 @@ else if (props.data.url) {
                 <Row>
                         <Col xl="6" md="12" xs="12" >{imgOrVideoPlayer}</Col>
                         <Col xl="6" md="12" xs="12">
-                            <h2>{props.data.title}</h2>
-                            <h3>{props.data.date}</h3><br/>
-                            <p>{props.data.explanation}</p>
+                            <NasaDes>
+                                <h2>{props.data.title}</h2>
+                                <h3>{props.data.date}</h3><br/>
+                                <p>{props.data.explanation}</p>
+                            </NasaDes>
                         </Col>
                 </Row>
                 </NasaData>
