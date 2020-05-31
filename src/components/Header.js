@@ -22,7 +22,7 @@ const Header = () => {
     return (
     <HeaderDiv>
         <h1>NASA Astronomy</h1>
-        <p>Welcome to Astronomy Picture of the Day, where we learn and explore our space everyday.</p>
+        <p>Welcome to Astronomy Picture of the Day, where we learn and explore the space everyday.</p>
     </HeaderDiv>
     );
 };
