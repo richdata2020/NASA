@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const headerDiv = styled.div`
+const HeaderDiv = styled.div`
     background-image: url(components/image.png);
     padding-bottom: 3%;
     padding-top: 3%;
@@ -20,10 +20,10 @@ const headerDiv = styled.div`
 
 const Header = () => {
     return (
-    <headerDiv>
+    <HeaderDiv>
         <h1>NASA Astronomy</h1>
         <p>Welcome to Astronomy Picture of the Day, where we learn and explore our space everyday.</p>
-    </headerDiv>
+    </HeaderDiv>
     );
 };
 
