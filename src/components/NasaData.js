@@ -20,7 +20,6 @@ export default function NasaData() {
     const[date, setDate] = useState([new Date()])
 
     const decreaseDate = () => {
-        let nasaAPI = process.env.REACT_APP_NasaAPIKey;
         let yesterday = new Date();
         let currentDate = new Date(date);
         yesterday.setDate(currentDate.getDate() - 1);
