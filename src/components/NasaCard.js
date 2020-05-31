@@ -26,7 +26,7 @@ const NasaDes = styled.div`
     text-align: justify;
     @media (max-width: 1000px) {
         padding-right: 0px;
-        padding: 0 5%;
+        padding: 5%;
     }
 `
 
