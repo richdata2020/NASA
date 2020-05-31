@@ -20,15 +20,16 @@ export default function NasaData() {
     const[date, setDate] = useState([new Date()])
 
     const decreaseDate = () => {
-        var yesterday = new Date();
-        var currentDate = new Date(date);
+        let nasaAPI = process.env.REACT_APP_NasaAPIKey;
+        let yesterday = new Date();
+        let currentDate = new Date(date);
         yesterday.setDate(currentDate.getDate() - 1);
         setDate(yesterday);
     }
     const increaseDate = () => {
-        var tomorrow = new Date();
-        var checkIfToday = new Date();
-        var currentDate = new Date(date);
+        let tomorrow = new Date();
+        let checkIfToday = new Date();
+        let currentDate = new Date(date);
         tomorrow.setDate(currentDate.getDate() + 1);
         console.log(checkIfToday)
         console.log(currentDate)
@@ -38,11 +39,12 @@ export default function NasaData() {
         else{
             setDate(tomorrow);
         }
-    }        
+    }
+    
  
     useEffect(() => {
         axios
-        .get(`http://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NasaAPIKey}&date=` + formatDate(date))
+        .get(`http://api.nasa.gov/planetary/apod?api_key=${nasaAPI}&date=` + formatDate(date))
         .then(response => {
             console.log("API", response.data);
             setNasa(response.data);
