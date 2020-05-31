@@ -18,9 +18,9 @@ function formatDate(date) {
 export default function NasaData() {
     const[Nasa, setNasa] = useState([]);
     const[date, setDate] = useState([new Date()])
-
+    let nasaAPI = process.env.REACT_APP_NasaAPIKey;
     const decreaseDate = () => {
-        let nasaAPI = process.env.REACT_APP_NasaAPIKey;
+        
         let yesterday = new Date();
         let currentDate = new Date(date);
         yesterday.setDate(currentDate.getDate() - 1);
