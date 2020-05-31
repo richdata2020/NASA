@@ -44,7 +44,7 @@ export default function NasaData() {
  
     useEffect(() => {
         axios
-        .get(`http://api.nasa.gov/planetary/apod?api_key=${nasaAPI}&date=` + formatDate(date))
+        .get(`https://api.nasa.gov/planetary/apod?api_key=${nasaAPI}&date=` + formatDate(date))
         .then(response => {
             console.log("API", response.data);
             setNasa(response.data);
