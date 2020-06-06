@@ -30,15 +30,17 @@ const NasaDes = styled.div`
     }
 `
 
+
 const NasaCard = props => {
 
-    var imgOrVideoPlayer;
+var imgOrVideoPlayer;
 if (props.data.hdurl) {
     imgOrVideoPlayer = <Img src = {props.data.hdurl} alt={"NASA's best capture of the day!"} />
 }
 
 else if (props.data.url) {
-    imgOrVideoPlayer = <ReactPlayer url={props.data.url} playing />
+    
+    imgOrVideoPlayer = <ReactPlayer width="100%" className="player" url={props.data.url} playing />
 }
     return (
         <NasaContainer>
